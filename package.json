@@ -1,0 +1,9 @@
+{
+  "name": "magnetarium",
+  "version": "4.1.0",
+  "private": false,
+  "description": "An interactive museum of magnetic fields, electromagnetism, toroidal coils and geometry.",
+  "type": "module",
+  "scripts": {"test": "node --test tests/physics.test.mjs", "build": "python build.py"},
+  "license": "MIT"
+}

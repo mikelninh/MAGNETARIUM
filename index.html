@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#0a1118"/>
+<meta name="description" content="MAGNETARIUM: a living museum of magnetism, electromagnetism, toroidal fields and geometry. Six guided discoveries. One beautiful playground."/>
+<meta property="og:title" content="MAGNETARIUM — The Invisible Museum"/>
+<meta property="og:description" content="Touch the invisible. Explore magnetic fields, flowing electricity, toroidal coils and geometry with six interactive experiences."/>
+<title>MAGNETARIUM — The Invisible Museum</title>
+<link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+<div class="site-shell" id="top">
+ <header class="site-header">
+  <a class="wordmark" href="#top" aria-label="Magnetarium home"><span class="sigil" aria-hidden="true">✳</span><span>MAGNETARIUM<small>THE INVISIBLE MUSEUM</small></span></a>
+  <nav class="header-nav" aria-label="Main navigation"><a href="#discoveries">Explore</a><a href="#field-notes">Field notes</a><button class="header-share" id="headerShare" type="button">Share <span aria-hidden="true">↗</span></button></nav>
+ </header>
+ <section class="intro" aria-label="Introduction"><div class="intro-copy"><span class="overline"><span class="overline-dot"></span> A PLACE TO WONDER · VOL. 04.1</span><h1>The beauty of<br><em>what we cannot see.</em></h1><p>Magnetic fields. Moving electricity. Worlds folded into circles. Explore the forces and forms hiding in plain sight.</p></div><div class="intro-aside"><div class="orbit-mark" aria-hidden="true"><span></span><i></i></div><p>Six guided discoveries.<br>Infinite ways to play.</p></div></section>
+ <section class="museum" id="discoveries" aria-label="Interactive laboratory">
+   <div class="museum-head"><div class="museum-label"><span class="indicator"></span> <b>THE LIVING LABORATORY</b><span class="thin"> / CHOOSE A DISCOVERY</span></div><div class="museum-head-right"><span class="keyboard-label">DRAG · EXPLORE · CHANGE</span><button id="copyLinkTop" type="button" class="ghost small">↗ Share this moment</button></div></div>
+   <div class="museum-body">
+    <aside class="journey" aria-label="Discovery menu">
+      <div class="journey-top"><span class="mini-label">YOUR JOURNEY</span><span class="journey-number" id="journeyNumber">01 / 06</span></div>
+      <div class="journey-list" id="journeyList">
+       <button type="button" data-scene="magnet" data-short="Magnetic field" class="journey-item active" aria-current="step"><span class="journey-index">01</span><span class="journey-text" data-label="Magnets"><b>The invisible handshake</b><small>Magnetism · field</small></span><span class="journey-icon">↗</span></button>
+       <button type="button" data-scene="compass" data-short="Compass" class="journey-item"><span class="journey-index">02</span><span class="journey-text" data-label="Compasses"><b>A thousand tiny compasses</b><small>Magnetism · direction</small></span><span class="journey-icon">↗</span></button>
+       <button type="button" data-scene="wire" data-short="Electric wire" class="journey-item"><span class="journey-index">03</span><span class="journey-text" data-label="Electric wire"><b>Electricity draws circles</b><small>Electromagnetism · wire</small></span><span class="journey-icon">↗</span></button>
+       <button type="button" data-scene="solenoid" data-short="Coil" class="journey-item"><span class="journey-index">04</span><span class="journey-text" data-label="Electromagnet"><b>The field within</b><small>Electromagnetism · coil</small></span><span class="journey-icon">↗</span></button>
+       <button type="button" data-scene="toroid" data-short="3D torus" class="journey-item"><span class="journey-index">05</span><span class="journey-text" data-label="3D torus"><b>A field without an end</b><small>Toroid · 3D explorer</small></span><span class="journey-icon">↗</span></button>
+       <button type="button" data-scene="geometry" data-short="Geometry" class="journey-item"><span class="journey-index">06</span><span class="journey-text" data-label="Patterns"><b>Circles become cathedrals</b><small>Geometry · architecture</small></span><span class="journey-icon">↗</span></button>
+      </div>
+      <div class="journey-bottom"><span class="star-asterisk">✳</span><span>Start anywhere.<br><strong>Follow your curiosity.</strong></span></div>
+    </aside>
+    <main class="exhibit" id="exhibit">
+      <div class="canvas-bar"><div class="mode-pill"><span class="live-dot"></span><span id="sceneCategory">01 / MAGNETISM</span></div><div class="scene-switch" role="group" aria-label="Visualisation style" id="viewSwitch"><button type="button" data-view="glow" class="active">Glow</button><button type="button" data-view="lines">Lines</button><button type="button" data-view="filings">Filings</button></div></div>
+      <div class="canvas-frame" id="canvasFrame"><canvas id="stageCanvas" aria-label="Interactive field visualisation. Drag magnets, rotate the torus or experiment with current using the controls."></canvas><span class="canvas-corner tl"></span><span class="canvas-corner tr"></span><span class="canvas-corner bl"></span><span class="canvas-corner br"></span><div class="canvas-label" id="canvasLabel"><span id="canvasLabelTop">FIELD STUDY / 001</span><strong id="canvasLabelBottom">Opposites attract.</strong></div><span class="canvas-hint" id="canvasHint">↖ Drag a magnet to begin</span><div class="canvas-equation" id="canvasEquation">B ~ 1 / r³ <span>ILLUSTRATIVE DIPOLES</span></div></div>
+      <div class="stage-toolbar"><div class="stage-activity"><span class="stage-activity-dot"></span><span id="activityLabel">FIELD IS ALIVE</span></div><div class="stage-actions"><button type="button" id="motionBtn" class="toolbar-button" aria-pressed="false">Ⅱ Pause motion</button><button type="button" id="resetBtn" class="toolbar-button">↺ Reset</button><button type="button" id="downloadBtn" class="toolbar-button">↓ Image</button></div></div>
+    </main>
+    <aside class="guide" aria-label="Experiment guide and controls"><div class="guide-heading"><div class="dock-header-copy"><span class="mini-label">LIVE FIELD STUDIO <span id="guideStep">/ 01</span></span><strong id="dockTitle" class="dock-title">The invisible handshake</strong></div><button id="mobileLearnBtn" class="mobile-learn-btn" type="button" aria-pressed="false" aria-controls="guideContent">✦ Discover <span aria-hidden="true">↗</span></button><span class="guide-spark">✷</span></div><div class="guide-content" id="guideContent"><span class="field-kicker" id="chapterKicker">MAGNETIC FIELD</span><h2 id="chapterTitle">The invisible<br>handshake.</h2><p id="chapterDesc">A magnet changes the space around it. Another magnet responds—even when nothing touches.</p><div class="challenge"><span class="challenge-head"><span>✦ TRY THIS</span><span id="challengeCount">01 / 06</span></span><p id="chapterChallenge">Drag the magnets closer together. Watch how the pathways bend and connect.</p></div><button id="whyButton" class="why-button" aria-expanded="false" type="button">Why does it work? <span id="whyChevron">＋</span></button><div class="why-panel" id="whyPanel" hidden><p id="chapterWhy"></p><a id="referenceLink" href="https://openstax.org/books/university-physics-volume-2/pages/11-2-magnetic-fields-and-lines" target="_blank" rel="noopener">Physics reference ↗</a></div></div><div class="guide-controls"><div class="controls-head"><span class="mini-label">PLAY WITH THE VARIABLES</span><span class="variables-spark">✦</span></div><div id="controlsContainer"></div><div class="speed-control"><label for="speedSlider">Time flow <output id="speedValue">0.6×</output></label><input id="speedSlider" type="range" min="0.1" max="2" step="0.1" value="0.6"/><div class="range-labels"><span>SLOW</span><span>FAST</span></div></div></div><div class="guide-bottom"><button type="button" id="prevScene" aria-label="Previous discovery">←</button><div><span>TAKE ANOTHER LOOK</span><b id="nextChapterLabel">A thousand tiny compasses</b></div><button type="button" id="nextScene" aria-label="Next discovery">→</button></div></aside>
+   </div>
+ </section>
+ <section class="below" id="field-notes"><div class="below-copy"><span class="overline">A NOTE ON THE NATURE OF WONDER</span><h2>Beauty can invite a question.<br><em>Evidence helps answer it.</em></h2><p>The magnetic and electrical scenes use simplified models grounded in established physics. The luminous effects, motion trails and architecture studies are visual interpretations. Circular forms are powerful in both mathematics and design—but geometric resemblance alone is not evidence of mysterious energies.</p></div><div class="below-columns"><div><span>01 / SCIENCE</span><strong>Fields & currents</strong><p>Try changing a current's direction. A magnetic field reverses with it.</p></div><div><span>02 / FORM</span><strong>A world of loops</strong><p>Explore the difference between a ring magnet, a wire loop and a toroidal coil.</p></div><div><span>03 / DESIGN</span><strong>Patterns to inhabit</strong><p>Invent rose-window patterns and repeated architectural forms.</p></div></div></section>
+ <footer class="site-footer"><span>✳ MAGNETARIUM <i>/</i> AN OPEN EXPERIMENT IN CURIOSITY</span><span>BUILT FOR EXPLORATION · V4.1</span></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="./src/app.js"></script>
+</body>
+</html>
